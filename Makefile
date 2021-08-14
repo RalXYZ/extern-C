@@ -1,7 +1,7 @@
-main: main.c c/c_procedure.* go/go.*
+main: main.c c/c_procedure.* go/go_procedure.*
 	cd c && make
 	cd go && make
-	$(CC) -o main main.c go/go.a c/libc_procedure.a -lpthread
+	$(CC) -o main main.c go/go_procedure.a c/libc_procedure.a -lpthread
 
 .PHONY: clean
 clean:

@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "go/go.h"
+#include "go/go_procedure.h"
 
 char language[] = "C";
 
