@@ -1,4 +1,4 @@
 fn main() {
-    println!("cargo:rustc-link-search=all=endpoint");    // rustc -L endpoint ...
-    println!("cargo:rustc-link-lib=dylib=c_procedure");  // rustc -l libc_procedure.a
+    println!("cargo:rustc-link-search=all=endpoint");     // rustc -L endpoint ...
+    println!("cargo:rustc-link-lib=static=c_procedure");  // rustc -l c_procedure
 }

@@ -7,10 +7,10 @@
 
 #define LEN 50
 
-void c_procedure(char* src_lang, int caller_stack) {
-    srand((unsigned int)time(NULL) + 1);
-    int stack = rand() % 10000;
-    printf("[%04d] start of a C procedure, called by %s [%04d]\n", stack, src_lang, caller_stack);
+void c_procedure(const char* caller_language, int caller_stack) {
+    srand((unsigned int)time(NULL));
+    int callee_stack = rand() % 10000;
+    printf("[%04d] start of a C procedure, called by %s [%04d]\n", callee_stack, caller_language, caller_stack);
 
-    printf("[%04d] end of a C procedure\n", stack);
+    printf("[%04d] end of a C procedure\n", callee_stack);
 }

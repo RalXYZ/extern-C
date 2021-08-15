@@ -1,4 +1,4 @@
-main: endpoint main.go
+main: main.go endpoint
 	cd endpoint && make
 	go build -o $@
 

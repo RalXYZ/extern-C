@@ -5,21 +5,21 @@
 
 #include "endpoint/go_procedure.h"
 
-char language[] = "C";
+char caller_language[] = "C";
 
 int main() {
     srand((unsigned int)time(NULL));
-    int stack = rand() % 10000;
+    int caller_stack = rand() % 10000;
     
-    printf("[%04d] start of C main procedure\n", stack);
+    printf("[%04d] start of C main procedure\n", caller_stack);
 
-    GoString lang_to_go = {
-        language, 
-        strlen(language)
+    GoString caller_language_to_go = {
+        caller_language, 
+        strlen(caller_language)
     };
-    go_procedure(lang_to_go, (GoInt)stack);
+    go_procedure(caller_language_to_go, (GoInt)caller_stack);
 
-    printf("[%04d] end of C main procedure\n", stack);
+    printf("[%04d] end of C main procedure\n", caller_stack);
 
     return 0;
 }

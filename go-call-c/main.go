@@ -17,12 +17,12 @@ import (
 
 func main() {
 	rand.Seed(time.Now().Unix())
-	stack := rand.Intn(10_000)
-	fmt.Printf("[%04d] start of a golang procedure\n", stack)
+	caller_stack := rand.Intn(10_000)
+	fmt.Printf("[%04d] start of golang main procedure\n", caller_stack)
 
-	cStr := C.CString("golang")
-	defer C.free(unsafe.Pointer(cStr))
-	C.c_procedure(cStr, C.int(stack))
+	caller_language := C.CString("golang")
+	defer C.free(unsafe.Pointer(caller_language))
+	C.c_procedure(caller_language, C.int(caller_stack))
 
-	fmt.Printf("[%04d] end of a golang procedure\n", stack)
+	fmt.Printf("[%04d] end of golang main procedure\n", caller_stack)
 }
