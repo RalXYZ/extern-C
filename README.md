@@ -1,4 +1,4 @@
-# extern "C"
+# `extern "C"`
 This project demonstrates how to mix C with other programming languages.  
 
 Currently implemented:  

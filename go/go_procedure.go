@@ -25,8 +25,8 @@ func go_procedure(s string) {
 	fmt.Printf("[%04d] start of a golang procedure, called by %s\n", stack, s)
 
 	cStr := C.CString("golang")
+	defer C.free(unsafe.Pointer(cStr))
 	C.c_procedure(cStr)
-	C.free(unsafe.Pointer(cStr))
 
 	fmt.Printf("[%04d] end of a golang procedure\n", stack)
 }
