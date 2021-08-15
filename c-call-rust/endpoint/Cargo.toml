@@ -1,0 +1,13 @@
+[package]
+name = "c-call-rust"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+libc = "0.2.99"
+rand = "0.8.4"
+
+[lib]
+name = "rust_procedure"
+path = "procedure.rs"
+crate-type = ["staticlib"]

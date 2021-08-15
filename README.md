@@ -6,6 +6,7 @@ Currently implemented:
 | Caller | Callee |
 | :----: | :----: |
 | C | golang |
+| C | rust |
 | golang | C |  
 
 **The callee procedures have been archived into static libraries.**
