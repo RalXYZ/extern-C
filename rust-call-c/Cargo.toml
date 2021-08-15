@@ -1,0 +1,13 @@
+[package]
+name = "rust-call-c"
+version = "0.1.0"
+edition = "2018"
+build = "build.rs"
+
+[dependencies]
+libc = "0.2.99"
+rand = "0.8.4"
+
+[[bin]]
+name = "main"
+path = "main.rs"
