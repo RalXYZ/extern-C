@@ -1,10 +1,17 @@
-main: main.c c/c_procedure.* go/go_procedure.*
-	cd c && make
-	cd go && make
-	$(CC) -o main main.c go/go_procedure.a c/libc_procedure.a -lpthread
+.PHONY: build clean
 
-.PHONY: clean
+build:
+	@for i in `ls`; do \
+		if [ -d "$$i" ]; then \
+			cd $$i && make; \
+			cd ..; \
+		fi; \
+	done;
+
 clean:
-	cd c && make clean
-	cd go && make clean
-	rm main
+	@for i in `ls`; do \
+		if [ -d "$$i" ]; then \
+			cd $$i && make clean; \
+			cd ..; \
+		fi; \
+	done;
